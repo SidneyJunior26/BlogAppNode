@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"></li>
+              <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/categorias">Categorias</a>
+          </li>
+        </ul>
+    </div>
+    <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="/">Blog Node.js</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            {{#if user}}
+              <li class="nav-item active"></li>
+                  <a class="nav-link" title="Painel do administrador" href="/admin">Seja bem-vindo {{user.nome}}!</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/usuarios/logout">Logout</a>
+              </li>
+          {{else}}
+              <li class="nav-item">
+                  <a class="nav-link" href="/usuarios/login">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/usuarios/registro">Cadastrar</a>
+              </li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>
